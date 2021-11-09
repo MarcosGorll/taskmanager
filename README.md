@@ -28,6 +28,12 @@ The TaskManagers also followed exactly the specification, where 3 are implemente
 * FifoTaskManager: extends the DefaultTaskManager and overrides the add process operation, removing the oldest (first) process if the capacity was reached
 * PriorityTaskManager: extends the DefaultTaskManager and overrides the add process operation, removing a lower priority process if needed and possible
 
+## Running the tests
+To open and compile the project, only import it on IntelliJ IDEA, and it works. To run the tests, there are 2 options:
+* Running from IntelliJ IDEA: right-click on the /test/kotlin folder and run tests 
+* Running from gradle: the Gradle Wrapper is not pushed to the branch, so you might need to first run the command gradle wrapper, 
+and after run ./gradlew test
+
 ## Some last notes
 Some items where considered to be implemented, but they seemed to break the specification. Those items are:
 * PID as long value: it seemed more natural to have a long value for processes PIDs, but to do that in a safe way without collisions,
